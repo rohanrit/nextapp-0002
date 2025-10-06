@@ -8,7 +8,7 @@ export async function GET() {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    return new Response(JSON.stringify({ success: false, message: 'DB connection failed' }), {
+    return new Response(JSON.stringify({ success: false, message: 'DB connection failed-'+ error }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
