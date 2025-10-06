@@ -1,10 +1,23 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
-import React, { useState } from 'react';
+import { redirect } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
 
 const SigninPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  // const { 
+  //       data: session, 
+  //       isPending, //loading state
+  //       error, //error object
+  //       refetch //refetch the session
+  // } = authClient.useSession();
+  // useEffect(()=>{
+  //   if(session){
+  //     redirect('/dashboard');
+  //   }
+  // },[session])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

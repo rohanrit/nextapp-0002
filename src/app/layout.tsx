@@ -32,8 +32,8 @@ export default function RootLayout({
         <nav className="flex items-center gap-4">
           <Link href={'/'}>Home</Link>
           <Link href={'/dashboard'}>Dashboard</Link>
-          <Link href={'/signin'}>Signin</Link>
-          <Link href={'/signup'}>Signup</Link>
+          <Link href={'/auth/signin'}>Signin</Link>
+          <Link href={'/auth/signup'}>Signup</Link>
           <Logout/>
         </nav>
         {children}
